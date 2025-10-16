@@ -1,6 +1,6 @@
-streamlit==1.30.0
-langchain==0.3.27
-langchain-openai==0.0.17
-pdfminer.six==20221105
-python-docx==0.8.11
-rich==13.4.2
+streamlit
+langchain
+langchain-openai
+pdfminer.six
+python-docx
+rich
