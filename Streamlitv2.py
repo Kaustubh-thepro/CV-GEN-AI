@@ -15,7 +15,8 @@ st.set_page_config(page_title="AI Cover Letter Generator", page_icon="✉️", l
 st.title("✉️ AI Cover Letter Generator (ChatGPT API)")
 
 # OpenAI API key
-os.environ["OPENAI_API_KEY"] = "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"
+if "OPENAI_API_KEY" not in os.environ:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 # =========================
 # FUNCTIONS
