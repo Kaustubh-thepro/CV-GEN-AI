@@ -15,8 +15,12 @@ st.set_page_config(page_title="AI Cover Letter Generator", page_icon="✉️", l
 st.title("✉️ AI Cover Letter Generator (ChatGPT API)")
 
 # OpenAI API key
-if "OPENAI_API_KEY" not in os.environ:
+# Set API key from Streamlit secrets
+if "OPENAI_API_KEY" in st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+else:
+    st.error("❌ OPENAI_API_KEY not found in Streamlit secrets. Please add it in Settings → Secrets.")
+    st.stop()
 
 # =========================
 # FUNCTIONS
