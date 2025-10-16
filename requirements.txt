@@ -4,3 +4,4 @@ langchain-openai
 pdfminer.six
 python-docx
 rich
+pdfminer.six
